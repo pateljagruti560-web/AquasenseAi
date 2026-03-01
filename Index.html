@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaSense AI – Water Quality Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>AquaSense AI</h1>
+    <p>Hybrid AI Powered Water Quality Testing</p>
+</header>
+
+<section class="form-section">
+    <h2>Enter Water Parameters</h2>
+
+    <form id="waterForm">
+
+        <label>pH</label>
+        <input type="number" step="0.1" id="ph">
+
+        <label>TDS (ppm)</label>
+        <input type="number" id="tds">
+
+        <label>Turbidity (NTU)</label>
+        <input type="number" id="turbidity">
+
+        <label>Hardness (mg/L)</label>
+        <input type="number" id="hardness">
+
+        <label>Alkalinity (mg/L)</label>
+        <input type="number" id="alkalinity">
+
+        <label>Nitrates (mg/L)</label>
+        <input type="number" id="nitrates">
+
+        <label>Chlorine (mg/L)</label>
+        <input type="number" id="chlorine">
+
+        <label>Fluoride (mg/L)</label>
+        <input type="number" id="fluoride">
+
+        <label>Conductivity (µS/cm)</label>
+        <input type="number" id="conductivity">
+
+        <label>Water Colour</label>
+        <select id="color">
+            <option>Clear</option>
+            <option>Slight Yellow</option>
+            <option>Yellow</option>
+            <option>Brown</option>
+        </select>
+
+        <label>Odour</label>
+        <select id="odour">
+            <option>None</option>
+            <option>Chlorine smell</option>
+            <option>Earthy</option>
+            <option>Foul</option>
+        </select>
+
+        <button type="button" onclick="analyzeWater()">Get Instant Result</button>
+        <button type="button" onclick="generateAIReport()">Advanced AI Report</button>
+
+    </form>
+</section>
+
+<section id="resultSection" class="hidden">
+    <h2>Instant Water Quality Result</h2>
+    <p id="resultText"></p>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
